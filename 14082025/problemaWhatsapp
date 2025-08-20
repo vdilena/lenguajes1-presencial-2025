@@ -1,0 +1,14 @@
+# Crear un algoritmo para poder (leer un mensaje nuevo de Whatsapp)
+
+Tener un celular prendido
+Tener linea telefonica
+Tener wifi o datos
+Tener Whatsapp instalado
+Tener habilitadas las notificaciones
+Recorremos lista de notificaciones
+Leer el contenido/titulo de la notificacion
+Si las notificaciones son de Whatsapp entramos a verla
+Si la notificacion es de Whatsapp, abrimos la app y leemos la lista de chats
+Si no abrimos la notificacion, entramos al chat de Whatsapp
+Hacemos click en el chat de la persona que envio el mensaje
+Leer el ultimo mensaje

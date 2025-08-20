@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabla</title>
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="tabla.css" />
+</head>
+
+<body>
+    <header class="site-header"> <!-- Encabezado de la página -->
+        <nav class="nav"> <!-- Barra de navegación -->
+            <!-- Enlaces de navegación (anchor) -->
+            <div class="nav-left">
+                <a href="index.html">Home</a>
+                <a href="formulario.html">Cargar alumno</a>
+                <a href="tabla.html">Alumnos</a>
+            </div>
+            <div class="nav-right">
+                <a href="login.html" class="btn-login-link">Login</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h1>Lista de alumnos</h1>
+        <div class="table-responsive">
+            <table class="tabla">   
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Email</th>
+                        <th>Carrera</th>
+                        <th>Nota</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Ana Pérez</td>
+                        <td>ana@example.com</td>
+                        <td>Ciencia de Datos</td>
+                        <td>9</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Juan Gómez</td>
+                        <td>juan@example.com</td>
+                        <td>Matemática</td>
+                        <td>7</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Laura Díaz</td>
+                        <td>laura@example.com</td>
+                        <td>Estadística</td>
+                        <td>8</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="4">Promedio</td>
+                        <td>8</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </main>
+    <footer class="site-footer">
+        <small>Este es el footer de la pagina</small>
+    </footer>
+</body>
+
+</html>

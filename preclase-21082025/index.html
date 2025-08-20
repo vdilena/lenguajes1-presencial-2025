@@ -1,0 +1,130 @@
+<!DOCTYPE html> <!-- Indica al navegador que es un documento HTML5 -->
+<html lang="es"> <!-- Idioma principal del documento -->
+
+<head>
+    <meta charset="UTF-8" /> <!-- Soporte de caracteres latinos -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- Escala responsiva en móviles -->
+    <title>Home</title> <!-- Título que aparece en la pestaña del navegador -->
+    <link rel="stylesheet" href="index.css" /> <!-- Vincula el archivo CSS externo -->
+</head>
+
+<body>
+    <header class="site-header"> <!-- Encabezado de la página -->
+        <nav class="nav"> <!-- Barra de navegación -->
+            <!-- Enlaces de navegación (anchor) -->
+            <div class="nav-left">
+                <a href="index.html">Home</a>
+                <a href="formulario.html">Cargar alumno</a>
+                <a href="tabla.html">Alumnos</a>
+            </div>
+            <div class="nav-right">
+                <a href="login.html" class="btn-login-link">Login</a>
+            </div>
+        </nav>
+    </header>
+
+    <main id="home" class="container"> <!-- Contenido principal -->
+        <h1 id="titulo-principal">Carreras</h1> <!-- Título principal -->
+        <p id="parrafo-intro">Carreras del departamento de sistemas</p> <!-- Párrafo -->
+
+        <!-- Card de ejemplo -->
+        <section aria-labelledby="cards-heading"> <!-- Sección agrupada con nombre accesible para el elemento -->
+            <h2 id="cards-heading">Lista de carreras</h2> <!-- Título secundario -->
+            <div class="cards"> <!-- Contenedor flexible -->
+                <article class="card"> <!-- Cada card es un artículo -->
+                    <img src="https://picsum.photos/id/10/480/240" alt="Imagen Lorem picsum" class="card__img" />
+                    <div class="card__body"> <!-- Contenido de la card -->
+                        <h3 class="card__title">Ingeniería en Sistemas</h3>
+                        <p class="card__text">El Ingeniero en Sistemas egresado de la Universidad CAECE posee una sólida
+                            formación en ciencias básicas de la ingeniería, sistemas informáticos, algoritmos y
+                            programación y sistemas de organización de datos...
+                        </p>
+                        <a href="#modal-demo" class="button">Abrir modal</a> <!-- Botón que abre el modal -->
+                    </div>
+                </article>
+                <article class="card">
+                    <img src="https://picsum.photos/id/11/480/240" alt="Imagen Lorem picsum" class="card__img" />
+                    <div class="card__body">
+                        <h3 class="card__title">Lic. en Ciencia de Datos</h3>
+                        <p class="card__text">Estamos transitando una época donde todas las Organizaciones, desde las
+                            gubernamentales hasta las científicas, pasando por las Empresariales e Industriales,
+                            entienden que los datos constituyen uno de sus principales activos...
+                        </p>
+                        <a href="#modal-demo" class="button">Abrir modal</a>
+                    </div>
+                </article>
+                <article class="card">
+                    <img src="https://picsum.photos/id/12/480/240" alt="Imagen Lorem picsum" class="card__img" />
+                    <div class="card__body">
+                        <h3 class="card__title">Licenciatura en Nanotecnología</h3>
+                        <p class="card__text">Uno de los grandes objetivos de esta carrera es Desarrollar nuevos
+                            productos y servicios a partir del conocimiento de frontera resultante de la investigación
+                            en las dimensiones a nanoescala </p>
+                        <a href="#modal-demo" class="button">Abrir modal</a>
+                    </div>
+                </article>
+                <article class="card">
+                    <img src="https://picsum.photos/id/13/480/240" alt="Imagen Lorem picsum" class="card__img" />
+                    <div class="card__body">
+                        <h3 class="card__title">Licenciatura en Sistemas</h3>
+                        <p class="card__text">El Licenciado en Sistemas egresado de la Universidad CAECE posee sólidos
+                            conocimientos en ciencias de la computación, programación y estructuras de datos, ingeniería
+                            del software y paradigmas de programación...
+                        </p>
+                        <a href="#modal-demo" class="button">Abrir modal</a>
+                    </div>
+                </article>
+                <article class="card">
+                    <img src="https://picsum.photos/id/14/480/240" alt="Imagen Lorem picsum" class="card__img" />
+                    <div class="card__body">
+                        <h3 class="card__title">Tec. Univ. en Programación</h3>
+                        <p class="card__text">El Técnico Universitario en Programación egresado de la Universidad CAECE
+                            posee sólidos conocimientos en ciencias de la computación, programación y estructuras de
+                            datos, ingeniería del software y paradigmas de programación...
+                        </p>
+                        <a href="#modal-demo" class="button">Abrir modal</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Modal sin JS -->
+        <div id="modal-demo" class="modal" role="dialog" aria-labelledby="modal-title" aria-modal="true">
+            <!-- El role y aria son etiquetas de accesibilidad-->
+            <!-- Contenedor modal -->
+            <div class="modal__dialog"> <!-- Caja de diálogo -->
+                <h3 id="modal-title">Alcance del titulo</h3>
+                <p>
+                <ul>
+                    <li>Organizar y dirigir el área de sistemas de las organizaciones.</li>
+                    <li>Determinar estrategias y políticas de desarrollo de software. Seleccionar las herramientas de
+                        diseño y arquitecturas de software.</li>
+                    <li>Seleccionar las arquitecturas tecnológicas de procesamiento, software de base, y sistemas de
+                        comunicación y de almacenamiento de datos.</li>
+                    <li>Realizar estudios de factibilidad técnica y económica sobre configuración y dimensionamiento de
+                        sistemas de procesamiento de información.</li>
+                    <li>Gestionar proyectos asociados a los sistemas de información, desde el diseño hasta la operación
+                        y
+                        el mantenimiento.</li>
+                    <li>Diseñar, elaborar, implementar o evaluar métricas y normas en cuestiones de calidad y seguridad.
+                    </li>
+                    <li>Realizar arbitrajes, peritajes y tasaciones referidas a las áreas específicas de su aplicación y
+                        entendimiento.</li>
+                    <li>Ejercer como docente universitario y desarrollar actividades de capacitación y actualización
+                        profesional.</li>
+                    <li>Realizar tareas de investigación aplicada en temas de Sistemas de Hardware y Software y Sistemas
+                        de Información.</li>
+                </ul>
+                </p>
+                <a href="#" class="button button--ghost">Cerrar</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer"> <!-- Pie de página -->
+        <small>Este es el footer de la pagina</small>
+    </footer>
+    <script src="index.js"></script> <!-- Vincula el JS -->
+</body>
+
+</html>

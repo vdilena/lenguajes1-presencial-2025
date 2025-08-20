@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="formulario.css" />
+</head>
+
+<body>
+    <header class="site-header"> <!-- Encabezado de la página -->
+        <nav class="nav"> <!-- Barra de navegación -->
+            <!-- Enlaces de navegación (anchor) -->
+            <div class="nav-left">
+                <a href="index.html">Home</a>
+                <a href="formulario.html">Cargar alumno</a>
+                <a href="tabla.html">Alumnos</a>
+            </div>
+            <div class="nav-right">
+                <a href="login.html" class="btn-login-link">Login</a>
+            </div>
+        </nav>
+    </header>
+
+    <main id="home" class="container">
+        <h1 id="titulo-principal">Carga de alumnos</h1>
+
+        <section id="formulario" aria-labelledby="form-heading">
+            <h2 id="form-heading">Formulario para cargar un alumno en una materia</h2>
+            <form class="form" action="#" method="get">
+                <div class="form__row">
+                    <label for="nombre">Nombre</label>
+                    <input id="nombre" name="nombre" type="text" placeholder="Tu nombre" required />
+                </div>
+                <div class="form__row">
+                    <label for="email">Email</label>
+                    <input id="email" name="email" type="email" placeholder="tuemail@email.com" />
+                </div>
+                <div class="form__row">
+                    <label for="fecha">Fecha de nacimiento</label>
+                    <input id="fecha" name="fecha" type="date" placeholder="Ingrese una fecha" />
+                </div>
+                <div class="form__row">
+                    <label for="carrera">Carrera</label>
+                    <input id="carrera" name="carrera" type="text" placeholder="Ingresa en que carrera estas" required />
+                </div>
+                <div class="form__row">
+                    <label for="paises">Materia</label>
+                    <select id="paises" name="paises">
+                        <option value="">Seleccionar…</option>
+                        <option value="AR">Arquitectura y Sistemas Operativos</option>
+                        <option value="MK">Marketing</option>
+                        <option value="BD">Fundamentos de Base de Datos</option>
+                        <option value="AL">Elementos de Algebra</option>
+                        <option value="EP">Estadística y Probabilidad</option>
+                        <option value="AM">Elementos de Análisis Matemático</option>
+                        <option value="EA">Estructuras y Algoritmos de Datos I</option>
+                        <option value="MD">Matemática Discreta</option>
+                        <option value="TD">Transformación Digital</option>
+                    </select>
+                </div>
+                <div class="form__row">
+                    <label for="comentarios">Observaciones</label>
+                    <textarea id="comentarios" name="comentarios" rows="4" placeholder="Se puede escribir un texto largo"></textarea>
+                </div>
+                <button type="submit" class="button">Enviar</button>
+            </form>
+        </section>
+    </main>
+    <footer class="site-footer">
+        <small>Este es el footer de la pagina</small>
+    </footer>
+</body>
+
+</html>

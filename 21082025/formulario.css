@@ -1,0 +1,24 @@
+/* Formulario */
+.form {                                           /* Usar en <form class="form"> */
+    display: grid;                                /* Activa CSS Grid para layout del formulario */
+    grid-template-columns: repeat(2, 1fr);        /* Dos columnas de igual ancho */
+    gap: 16px;                                    /* Separación entre filas/columnas */
+}
+
+/* Grid 2 columnas */
+.form__row {                                      /* Envolver cada par label+control en <div class="form__row"> */
+    display: flex;                                /* Flex para apilar label y control verticalmente */
+    flex-direction: column;                       /* Coloca label arriba, input debajo */
+}
+
+.form__row input,                                 /* Aplica a inputs de texto/numero/email/etc. */
+.form__row select,                                /* Aplica a selects desplegables */
+.form__row textarea {                             /* Aplica a áreas de texto */
+    padding: 10px;                                /* Área cómoda para escribir */
+    border-radius: 8px;                           /* Bordes redondeados */
+    border: 1px solid #cbd5e1;                    /* Borde gris claro */
+}
+
+.form button[type="submit"] {                     /* Botón enviar dentro del form */
+    grid-column: 1 / -1;                          /* Ocupa el ancho de ambas columnas (1 hasta el final) */
+}

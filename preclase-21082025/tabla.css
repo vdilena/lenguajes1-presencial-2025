@@ -1,0 +1,53 @@
+/* Tabla estándar */
+.tabla {                                /* Usar en <table class="tabla"> */
+    width: 100%;                        /* Ocupa todo el ancho del contenedor */
+    border-collapse: collapse;          /* Bordes colapsados para estilo de tabla limpia */
+    background: #fff;                   /* Fondo blanco de la tabla */
+    border: 1px solid #cbd5e1;          /* Borde general alrededor de la tabla */
+    font-size: .95rem                   /* Tamaño de fuente levemente menor al base */
+}
+
+.tabla thead {
+    background: #1e293b;                /* Encabezado con fondo azul oscuro */
+    color: #f8fafc                      /* Texto claro en encabezado */
+}
+
+.tabla th,
+.tabla td {
+    padding: 12px 16px;                 /* Espaciado interno en celdas */
+    border: 1px solid #cbd5e1;          /* Bordes de celdas → rejilla visible */
+    text-align: left                    /* Alineación de texto por defecto a la izquierda */
+}
+
+.tabla tbody tr:nth-child(even) {
+    background: #f1f5f9                  /* Filas pares con fondo gris claro (efecto “cebra”) */
+}
+
+.tabla tbody tr:hover {
+    background: #e0f2fe                  /* Resalta fila al pasar el mouse */
+}
+
+.tabla tfoot {
+    background: #f8fafc;                 /* Pie de tabla con fondo sutil */
+    font-weight: 700                     /* Texto del pie en negrita (ej: totales) */
+}
+
+/* Responsive por scroll */
+.table-responsive {                       /* Contenedor envolvente de la tabla */
+    width: 100%;                          /* Ocupa ancho completo */
+    overflow-x: auto;                     /* Habilita scroll horizontal si la tabla no entra en pantalla */
+    -webkit-overflow-scrolling: touch     /* Scroll suave en iOS */
+}
+
+/* Evitar cortes incómodos en mobile */
+.tabla td,
+.tabla th {
+    white-space: nowrap                   /* Evita quiebres de línea → mejor para scroll horizontal */
+}
+
+@media (min-width:768px) {                /* En pantallas medianas/grandes */
+    .tabla td,
+    .tabla th {
+        white-space: normal               /* Permite quiebres de línea cuando hay espacio suficiente */
+    }
+}

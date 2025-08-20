@@ -1,0 +1,141 @@
+/* Reset básico y tipografía */
+* {                           /* Selecciona todos los elementos del documento */
+    box-sizing: border-box;   /* Incluye padding y borde dentro del ancho/alto declarado → layouts más predecibles */
+}
+
+/* Aplica a todos los elementos */
+html,                         /* Elemento raíz del documento */
+body {                        /* Cuerpo del documento (envolvente del contenido visible) */
+    margin: 0;                /* Elimina el margen por defecto del navegador → evita “borde blanco” exterior */
+    padding: 0;               /* Elimina el padding por defecto → control total del espaciado */
+}
+
+body {
+    font-family: system-ui, sans-serif; /* Tipografía predeterminada del sistema → legible y consistente */
+    color: #1f2937;                     /* Color de texto global (gris oscuro) → afecta todo el contenido no sobrescrito */
+    background: #A9F527;                /* Fondo global (verde) → visible detrás de tus secciones (.container, etc.) */
+}
+
+/* Contenedor central */
+.container {                  /* Usá esta clase para envolver bloques de contenido principales en tus HTML */
+    max-width: 1000px;        /* Limita el ancho máximo → texto más legible en pantallas grandes */
+    margin: 0 auto;           /* Centra horizontalmente el contenedor */
+    padding: 24px;            /* Espaciado interno general alrededor del contenido */
+}
+
+/* Estilos de botones */
+.button {                     /* Afecta enlaces o botones con class="button" en tus HTML */
+    display: inline-block;    /* Permite aplicar padding/ancho/alto como bloque, manteniéndose en línea */
+    padding: 10px 16px;       /* Área clickeable cómoda */
+    border-radius: 8px;       /* Bordes redondeados */
+    background: #2563eb;      /* Fondo azul */
+    color: #fff;              /* Texto blanco para buen contraste */
+    text-decoration: none;    /* Quita subrayado si es un <a> */
+}
+
+.button--secondary {          /* Variante secundaria: aplicar junto a .button en el HTML */
+    background: #059669;      /* Verde (éxito/acción secundaria) */
+}
+
+.button--ghost {              /* Variante “fantasma”: para acciones menos prominentes */
+    background: transparent;  /* Fondo transparente */
+    color: #111827;           /* Texto oscuro */
+    border: 1px solid #d1d5db;/* Borde suave para distinguirlo del fondo */
+}
+
+/* Estilo de header */
+.site-header {                /* Usar en <header class="site-header"> de tus HTML */
+    background: #1e293b;      /* Fondo azul muy oscuro → separa visualmente el encabezado */
+    padding: 12px 24px;       /* Espaciado interno (alto y laterales) */
+}
+
+/* Documentacion flexbox: https://developer.mozilla.org/es/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox */
+/*
+* Flexbox fue diseñado como un modelo unidimensional de layout, 
+* y como un método que pueda ayudar a distribuir el espacio entre los ítems de una interfaz 
+* y mejorar las capacidades de alineación.
+*/
+
+/* Estilos de barra de navegacion */
+.nav {                         /* Usar en <nav class="nav"> dentro del header */
+    display: flex;             /* Activa Flexbox → permite alinear hijos (.nav-left, .nav-right) */
+    justify-content: space-between; /* Empuja extremos: .nav-left a la izquierda, .nav-right a la derecha */
+    align-items: center;       /* Centra verticalmente los items en el eje del header */
+}
+
+.nav-left a,
+.nav-right a {                 /* Estilos comunes para links en ambos lados de la nav */
+    color: #f8fafc;            /* Texto claro para contrastar con fondo oscuro del header */
+    text-decoration: none;     /* Sin subrayado para aspecto de botón/enlace de navegación */
+    margin-right: 16px;        /* Separación horizontal entre los enlaces */
+}
+
+.nav-left a:last-child {       /* Ajuste fino: quita margen a la derecha del último enlace de la izquierda */
+    margin-right: 0;
+}
+
+.nav-right a {                 /* Estilos del enlace “Login” (o CTA) a la derecha */
+    font-weight: 600;          /* Más énfasis tipográfico */
+    background: #2563eb;       /* Fondo azul (parecido a .button) */
+    padding: 8px 14px;         /* Área clickeable */
+    border-radius: 8px;        /* Bordes redondeados */
+}
+
+.nav-right a:hover {           /* Interacción visual al pasar el mouse */
+    background: #1d4ed8;       /* Azul más oscuro */
+}
+
+/* Estilos de Cards */
+.cards {                       /* Contenedor de cards; usar <div class="cards"> en HTML */
+    display: flex;             /* Flexbox para acomodar tarjetas en fila */
+    flex-wrap: wrap;           /* Permite que salten a la siguiente línea si no entran */
+    gap: 16px;                 /* Separación uniforme entre tarjetas */
+}
+
+/* Flex con wrap */
+.card {                        /* Cada tarjeta (article/card) */
+    background: #fff;          /* Fondo blanco para contraste con body verde */
+    border: 1px solid #e5e7eb; /* Borde sutil */
+    border-radius: 12px;       /* Bordes redondeados */
+    flex: 1 1 280px;           /* Crece/encoge; base ~280px → responsive fluido */
+    max-width: 320px;          /* No excede 320px de ancho por tarjeta */
+}
+
+.card__img {                   /* Imagen dentro de la card */
+    width: 100%;               /* Ocupa el ancho de la tarjeta */
+    height: auto;              /* Mantiene proporción */
+}
+
+.card__body {                  /* Contenido textual de la card */
+    padding: 12px;             /* Espaciado interno */
+}
+
+/* Modal */
+.modal {                       /* Contenedor del modal; <div id="modal-demo" class="modal"> */
+    position: fixed;           /* Se fija a la ventana (no al flujo del documento) */
+    inset: 0;                  /* top/right/bottom/left = 0 → ocupa pantalla completa */
+    background: rgba(0, 0, 0, 0.55); /* Capa oscura semitransparente de fondo */
+    display: none;             /* Oculto por defecto */
+    align-items: center;       /* (Efectivo cuando display sea flex) Centra verticalmente el diálogo */
+    justify-content: center;   /* Centra horizontalmente el diálogo */
+}
+
+/* Apunta al elemento donde esta el modal y lo abre con CSS sin JS*/
+.modal:target {                /* Cuando la URL tiene #id que coincide con el modal → se vuelve el :target */
+    display: flex;             /* Muestra el modal y activa centrado del diálogo */
+}
+
+/* Se muestra solo cuando se apunta al id */
+.modal__dialog {               /* Caja interna del modal (el cuadro blanco) */
+    background: #fff;          /* Fondo del diálogo */
+    border-radius: 12px;       /* Bordes redondeados */
+    padding: 20px;             /* Espacio interno */
+    max-width: 520px;          /* Ancho máximo para que no sea gigante en desktop */
+}
+
+/* Footer */
+.site-footer {                 /* Usar en <footer class="site-footer"> */
+    padding: 16px 24px;        /* Espaciado interno */
+    text-align: center;        /* Centra el contenido (texto, enlaces) */
+    color: #64748b;            /* Color de texto atenuado */
+}

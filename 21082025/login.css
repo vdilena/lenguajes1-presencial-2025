@@ -1,0 +1,103 @@
+/* Reset básico */
+* { box-sizing: border-box; margin: 0; padding: 0; } /* Reset y box-sizing global */
+body {
+  font-family: system-ui, sans-serif;                 /* Tipografía global para la vista de login */
+  background: linear-gradient(135deg, #2563eb, #9333ea); /* Fondo degradado azul→violeta */
+  min-height: 100vh;                                  /* Altura mínima pantalla completa */
+  display: flex;                                      /* Para centrar el contenedor hijo */
+  align-items: center;                                /* Centrado vertical */
+  justify-content: center;                            /* Centrado horizontal */
+}
+
+/* Contenedor centrado */
+.login-container {
+  width: 100%;                                        /* Ocupa todo el ancho disponible */
+  max-width: 400px;                                   /* Limita el ancho del card de login */
+  padding: 20px;                                      /* Respiración alrededor del card */
+}
+
+/* Formulario */
+.login-form {
+  background: #fff;                                   /* Card blanco para contraste */
+  padding: 32px 24px;                                 /* Espaciado interno */
+  border-radius: 12px;                                /* Bordes redondeados */
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);            /* Sombra para elevar el card */
+  display: flex;                                      /* Layout vertical de los campos */
+  flex-direction: column;                             /* Apila elementos verticalmente */
+  gap: 16px;                                          /* Separación entre grupos de campos */
+}
+
+.login-title {
+  text-align: center;                                 /* Centra el título */
+  font-size: 1.5rem;                                  /* Tamaño del título */
+  margin-bottom: 12px;                                /* Extra espacio debajo del título */
+  color: #111827;                                     /* Color de texto del título */
+}
+
+/* Campos */
+.form-group {
+  display: flex;                                      /* Agrupa label+input */
+  flex-direction: column;                             /* Label arriba, input abajo */
+  gap: 6px;                                           /* Separación pequeña entre label e input */
+}
+
+.form-group label {
+  font-size: 0.9rem;                                  /* Label ligeramente más chico que el texto base */
+  color: #374151;                                     /* Gris medio para label */
+}
+
+.form-group input {
+  padding: 10px 14px;                                 /* Área clickeable y de escritura cómoda */
+  border: 1px solid #cbd5e1;                          /* Borde gris claro */
+  border-radius: 8px;                                 /* Bordes redondeados */
+  font-size: 1rem;                                    /* Tamaño de texto cómodo */
+  outline: none;                                      /* Quita el contorno por defecto */
+}
+
+.form-group input:focus {
+  border-color: #2563eb;                              /* Borde azul al enfocar (accesibilidad visual) */
+  box-shadow: 0 0 0 2px rgba(37,99,235,0.2);          /* Halo azul suave al enfocar */
+}
+
+/* Opciones */
+.form-options {
+  display: flex;                                      /* Coloca checkbox y enlace en una línea */
+  justify-content: space-between;                     /* Empuja a extremos (izq/der) */
+  align-items: center;                                /* Alineación vertical centrada */
+  font-size: 0.85rem;                                 /* Texto un poco más pequeño */
+}
+
+.forgot-link {
+  text-decoration: none;                              /* Quita subrayado */
+  color: #2563eb;                                     /* Azul para indicar enlace */
+}
+.forgot-link:hover { text-decoration: underline; }    /* Feedback al pasar el mouse */
+
+/* Botón */
+.btn-login {
+  padding: 12px;                                      /* Altura del botón */
+  border: none;                                       /* Sin borde por defecto */
+  border-radius: 8px;                                 /* Bordes redondeados */
+  background: #2563eb;                                /* Azul principal */
+  color: #fff;                                        /* Texto blanco */
+  font-size: 1rem;                                    /* Tamaño de fuente del botón */
+  cursor: pointer;                                    /* Cursor de mano al pasar */
+  transition: background 0.2s ease;                   /* Suaviza el cambio de color al hover */
+}
+.btn-login:hover { background: #1d4ed8; }             /* Azul más oscuro al hover */
+
+/* Footer */
+.signup-text {
+  text-align: center;                                 /* Centra el texto inferior */
+  font-size: 0.9rem;                                  /* Tamaño ligeramente menor */
+}
+.signup-text a {
+  color: #9333ea;                                     /* Enlace violeta (coherente con el fondo) */
+  text-decoration: none;                              /* Sin subrayado */
+}
+.signup-text a:hover { text-decoration: underline; }  /* Subrayado al hover */
+
+/* Responsivo */
+@media (max-width: 480px) {
+  .login-form { padding: 24px 16px; }                 /* Reduce padding en pantallas muy chicas */
+}
