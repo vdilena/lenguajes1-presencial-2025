@@ -1,3 +1,4 @@
+
 /**
  * HAY QUE AGREGAR USO DE VARIABLES, PROMPT, CONSOLE.LOG Y TIPO DE DATOS
  */
@@ -7,6 +8,7 @@ console.log("✅ JS cargado — Semana 1");
 
 // Variables con const y let
 const curso = "Lenguajes 1"; // string
+// curso = "Lenguajes 11" Es erroneo en la interpretacion
 let semana = 1; // number mutable
 const esOnline = true; // boolean
 
@@ -31,4 +33,6 @@ semana = semana + 1;
 console.log("La próxima semana será:", semana);
 
 const mensaje = `Bienvenida ${usuario.nombre} al curso ${curso}.`; // template string
+const otroMensaje = "Este es otro ejemplo de " + semana + " para el curso " + curso
 console.log(mensaje);
+console.log(otroMensaje)

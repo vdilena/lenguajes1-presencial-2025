@@ -71,6 +71,7 @@ body {
   text-decoration: none;                              /* Quita subrayado */
   color: #2563eb;                                     /* Azul para indicar enlace */
 }
+
 .forgot-link:hover { text-decoration: underline; }    /* Feedback al pasar el mouse */
 
 /* Botón */
@@ -84,6 +85,7 @@ body {
   cursor: pointer;                                    /* Cursor de mano al pasar */
   transition: background 0.2s ease;                   /* Suaviza el cambio de color al hover */
 }
+
 .btn-login:hover { background: #1d4ed8; }             /* Azul más oscuro al hover */
 
 /* Footer */
