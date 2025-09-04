@@ -9,6 +9,8 @@
 <body>
   <main class="login-container">
     <form class="login-form" action="#" method="post">
+      <div id="mensaje_error" class="mensaje_error_oculto">El usuario y/o la contraseña son inconrrectos!</div>
+      <div id="mensaje_exito" class="mensaje_exito_oculto">Usuario logueado!</div>
       <h1 class="login-title">Iniciar Sesión</h1>
 
       <!-- Campo de email -->
@@ -32,7 +34,7 @@
       </div>
 
       <!-- Botón -->
-      <button type="button" class="btn-login" onclick="location.href='../index.html'">Entrar</button>
+      <button id="btnEntrar" type="button" class="btn-login">Entrar</button>
     </form>
   </main>
   <script src="login.js"></script>

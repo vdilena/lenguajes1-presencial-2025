@@ -103,3 +103,25 @@ body {
 @media (max-width: 480px) {
   .login-form { padding: 24px 16px; }                 /* Reduce padding en pantallas muy chicas */
 }
+
+.mensaje_error_oculto{
+  color: red;
+  text-align: center;
+  display: none;
+}
+
+.mensaje_error_visible{
+  color: red;
+  text-align: center;
+}
+
+.mensaje_exito_oculto{
+  color: green;
+  text-align: center;
+  display: none;
+}
+
+.mensaje_exito_visible{
+  color: green;
+  text-align: center;
+}
