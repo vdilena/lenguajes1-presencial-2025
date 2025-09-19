@@ -139,3 +139,7 @@ body {
     text-align: center;        /* Centra el contenido (texto, enlaces) */
     color: #64748b;            /* Color de texto atenuado */
 }
+
+.show-username {
+    color: white;
+}

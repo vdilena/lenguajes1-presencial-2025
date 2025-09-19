@@ -17,7 +17,7 @@
                 <a href="formulario/formulario.html">Cargar alumno</a>
                 <a href="tabla/tabla.html">Alumnos</a>
             </div>
-            <div class="nav-right">
+            <div id="linkLogin"class="nav-right">
                 <a href="login/login.html" class="btn-login-link">Login</a>
             </div>
         </nav>
@@ -30,15 +30,15 @@
         <section aria-labelledby="cards-heading"> <!-- Sección agrupada con nombre accesible para el elemento -->
             <h2 id="cards-heading">Lista de carreras</h2> <!-- Título secundario -->
             <div id="cards" class="cards"> <!-- Contenedor flexible -->
-                <article class="card"> <!-- Cada card es un artículo -->
+                <!-- <article class="card">
                     <img src="https://picsum.photos/id/10/480/240" alt="Imagen Lorem picsum" class="card__img" />
-                    <div class="card__body"> <!-- Contenido de la card -->
+                    <div class="card__body">
                         <h3 class="card__title">Ingeniería en Sistemas</h3>
                         <p class="card__text">El Ingeniero en Sistemas egresado de la Universidad CAECE posee una sólida
                             formación en ciencias básicas de la ingeniería, sistemas informáticos, algoritmos y
                             programación y sistemas de organización de datos...
                         </p>
-                        <a href="#modal-demo" class="button">Abrir modal</a> <!-- Botón que abre el modal -->
+                        <a href="#modal-demo" class="button">Abrir modal</a>
                     </div>
                 </article>
                 <article class="card">
@@ -83,7 +83,7 @@
                         </p>
                         <a href="#modal-demo" class="button">Abrir modal</a>
                     </div>
-                </article>
+                </article> -->
             </div>
         </section>
         <div id="modal-demo" class="modal" role="dialog" aria-labelledby="modal-title" aria-modal="true">
@@ -92,8 +92,8 @@
             <div class="modal__dialog"> <!-- Caja de diálogo -->
                 <h3 id="modal-title">Alcance del titulo</h3>
                 <p>
-                    <ul>
-                        <li>Organizar y dirigir el área de sistemas de las organizaciones.</li>
+                    <ul id="listaModal">
+                        <!-- <li>Organizar y dirigir el área de sistemas de las organizaciones.</li>
                         <li>Determinar estrategias y políticas de desarrollo de software. Seleccionar las herramientas de
                             diseño y arquitecturas de software.</li>
                         <li>Seleccionar las arquitecturas tecnológicas de procesamiento, software de base, y sistemas de
@@ -110,7 +110,7 @@
                         <li>Ejercer como docente universitario y desarrollar actividades de capacitación y actualización
                             profesional.</li>
                         <li>Realizar tareas de investigación aplicada en temas de Sistemas de Hardware y Software y Sistemas
-                            de Información.</li>
+                            de Información.</li> -->
                     </ul>
                 </p>
                 <a href="#" class="button button--ghost">Cerrar</a>
@@ -121,6 +121,7 @@
     <footer class="site-footer"> <!-- Pie de página -->
         <small>Este es el footer de la pagina</small>
     </footer>
+    <script src="carreras.js"></script>
     <script src="index.js"></script> <!-- Vincula el JS -->
 </body>
 
