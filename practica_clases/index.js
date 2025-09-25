@@ -2,7 +2,7 @@
 const mostrarUsernameSiAplica = () => {
 
   const username = localStorage.getItem("usuario")
-  if(username) {// Seria la misma evaluacion que username != null && username != "" & username != undefined
+  if(username) {// Seria la misma evaluacion que username != null && username != "" && username != undefined
 
     const linkLogin = document.getElementById("linkLogin")
     linkLogin.innerHTML = "<span class='show-username'>" + username + "</span>"
@@ -48,6 +48,10 @@ const cargarCarrerasEnPantalla = () => {
   console.log(primerCarrera.imagen)
   console.log(primerCarrera.descripcion)
   console.log(primerCarrera.alcance_titulo)*/
+
+  /*carreras.forEach((carrera, index) => {
+    cargarItemCard(carrera, index)
+  })*/
 
   for (let index = 0; index < carreras.length; index++) {
 
@@ -116,6 +120,7 @@ const manejoEventoClickModal = () => {
   for (let index = 0; index < botonesAbrirModal.length; index++) {
 
     const botonAbrirModal = botonesAbrirModal[index];
+    //console.log(botonAbrirModal.parentElement.children)
     const indice = botonAbrirModal.getAttribute("indiceCarrera")
     console.log(indice) 
     botonAbrirModal.addEventListener("click",() => {
